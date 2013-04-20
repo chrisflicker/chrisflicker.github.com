@@ -5,13 +5,13 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>My Octopress Blog</title>
+  <title>安裝 Octopress 懶人包 - My Octopress Blog</title>
  
   <!-- seo http://ihavanna.org/Internet/2013-01/octopress-seo.html -->
   <meta name="author" content="Your Name">
   
   <meta name="description" content="前言 今天下午把 Octopress 裝了起來並發佈到了 github page，弄到好花了不少時間，真心覺得用這麼麻煩的流程寫部落格應該會讓文章更新頻率降低吧？（而且換機器還必須弄起一樣的環境才能寫文章）駭客的個性應該不只是把複雜的事變簡單也是把簡單的事弄得更複雜（octoprss 號稱是給 &hellip;">
-  <meta name="keywords" content="">
+  <meta name="keywords" content="Octoprss">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://chrisflicker.github.io">
+  <link rel="canonical" href="http://chrisflicker.github.io/blog/2013/04/20/octopress-installed">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="My Octopress Blog" type="application/atom+xml">
@@ -64,15 +64,12 @@
 </nav>
   <div id="main">
     <div id="content">
-      <div class="blog-index">
+      <div>
+<article class="hentry" role="article">
   
-  
-  
-    <article>
-      
   <header>
     
-      <h1 class="entry-title"><a href="/blog/2013/04/20/octopress-installed/">安裝 Octopress 懶人包</a></h1>
+      <h1 class="entry-title">安裝 Octopress 懶人包</h1>
     
     
       <p class="meta">
@@ -95,7 +92,7 @@
   </header>
 
 
-  <div class="entry-content"><h2>前言</h2>
+<div class="entry-content"><h2>前言</h2>
 
 <p>今天下午把 Octopress 裝了起來並發佈到了 github page，弄到好花了不少時間，真心覺得用這麼麻煩的流程寫部落格應該會讓文章更新頻率降低吧？（而且換機器還必須弄起一樣的環境才能寫文章）駭客的個性應該不只是把複雜的事變簡單也是把簡單的事弄得更複雜（octoprss 號稱是給 hacker 用的部落格框架）總而言之不安於現況就是了！</p>
 
@@ -111,23 +108,136 @@
 </ol>
 
 
+<!-- more -->
+
+
+<p>看更多 <a href="http://blog.xdite.net/posts/2011/10/07/what-is-octopress/">XDite</a> 的介紹..</p>
+
+<h2>為什麼不 Octopress</h2>
+
+<p>有好處自然就有壞處：</p>
+
+<ol>
+<li>換電腦更新會有難度</li>
+<li>需要懂 <a href="http://git-scm.com/book">git</a>, <a href="http://markdown.tw/" title="markdown 參考">Markdown 語法</a>（<a href="http://daringfireball.net/projects/markdown/basics">英文版</a>）, 基礎 unix 指令</li>
+<li>無圖床支援（我看很多人以 flickr / Google+ / dropbox 解決）</li>
+</ol>
+
+
+<h2>安裝 Octopress</h2>
+
+<p>在安裝 octopress 之前必須要有 git 和 ruby (1.9.2 以上) 環境</p>
+
+<p>創建一個新目錄（個人習慣）並且在終端機下 <code>cd</code> 到那目錄，接著把 octopress 整個 <code>pull</code> 下來（後面可以命名，例如我加上了 blog，便會把原本名為 octopress 的資料夾換成 blog）</p>
+
+<pre><code>$ git clone git://github.com/imathis/octopress.git blog
+$ cd blog  //會有提示訊息 yes 就可以
+$ gem install bundler  // 安裝相關附屬插件
+$ bundle install  //安裝前請確定 ruby 版本為 1.9.2 以上  
+</code></pre>
+
+<p>沒問題的話，接著安裝主題</p>
+
+<pre><code>$ rake install
+## Copying classic theme into ./source and ./sass  
+</code></pre>
+
+<p>到目前為止算是安裝完成了，只要..</p>
+
+<pre><code>$ rake preview
+</code></pre>
+
+<p>便可以在本機端開個 port 4000 的 web server 起來，瀏覽器輸入 <a href="http://127.0.0.1:4000">http://127.0.0.1:4000</a> 馬上看到生成的畫面（終端機 <code>Ctrl+C</code> 便終止 server）</p>
+
+<h2>修改配置</h2>
+
+<pre><code>_config.yml  # blog主要設定配置檔
+config.rb    # Compass 的設定檔
+Rakefile     # rake產生及發怖網頁設定檔
+</code></pre>
+
+<p>在 <code>_config.yml</code> 檔案修改 title, url, author 以及各個社交網站的帳號 ID</p>
+
+<!--
+
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">rectangle</span> <span class="nl">setX:</span> <span class="mi">10</span> <span class="nl">y:</span> <span class="mi">10</span> <span class="nl">width:</span> <span class="mi">20</span> <span class="nl">height:</span> <span class="mi">20</span><span class="p">];</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">nslog</span> <span class="s">@&quot;fff&quot;</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+&#8211;>
+
+
+<h3>延伸閱讀</h3>
+
+<ul>
+<li><a href="http://rogerdudler.github.com/git-guide/index.zh.html">git - 简易指南</a></li>
+<li><a href="http://octopress.org/docs/deploying/github/">octopress deploy to github</a></li>
+</ul>
+
+
+<!--
+![alt testing](https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/168563_10151535497675199_1178836229_n.jpg "title 內容")
+
+[Setting up a custom domain with Pages]: https://help.github.com/articles/setting-up-a-custom-domain-with-pages -->
+
+
+
 </div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  
-    <footer>
-      <a rel="full-article" href="/blog/2013/04/20/octopress-installed/">Read on &rarr;</a>
-    </footer>
+
+<span class="byline author vcard">Posted by <span class="fn">Your Name</span></span>
+
+      
+
+
+
+
+
+
+
+
   
 
 
-    </article>
+<time datetime="2013-04-20T20:31:00+08:00" pubdate data-updated="true">Apr 20<span>th</span>, 2013</time>
+      
+
+<span class="categories">
   
-  <div class="pagination">
+    <a class='category' href='/blog/categories/octoprss/'>Octoprss</a>
+  
+</span>
+
+
+    </p>
     
-    <a href="/blog/archives">Blog Archives</a>
-    
-  </div>
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://chrisflicker.github.io/blog/2013/04/20/octopress-installed/" data-via="" data-counturl="http://chrisflicker.github.io/blog/2013/04/20/octopress-installed/" >Tweet</a>
+  
+  
+  
 </div>
+
+    
+    <p class="meta">
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
 <aside class="sidebar">
   
     <section>
@@ -147,6 +257,7 @@
 
   
 </aside>
+
 
     </div>
   </div>

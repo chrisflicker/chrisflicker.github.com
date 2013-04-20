@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://chrisflicker.github.io/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Octoprss | My Octopress Blog]]></title>
+  <link href="http://chrisflicker.github.io/blog/categories/octoprss/atom.xml" rel="self"/>
   <link href="http://chrisflicker.github.io/"/>
   <updated>2013-04-20T20:33:49+08:00</updated>
   <id>http://chrisflicker.github.io/</id>
@@ -85,16 +85,14 @@ Rakefile     # rake產生及發怖網頁設定檔
 <p>在 <code>_config.yml</code> 檔案修改 title, url, author 以及各個社交網站的帳號 ID</p>
 
 <!--
-
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<div class='bogus-wrapper'><notextile><figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="p">[</span><span class="n">rectangle</span> <span class="nl">setX:</span> <span class="mi">10</span> <span class="nl">y:</span> <span class="mi">10</span> <span class="nl">width:</span> <span class="mi">20</span> <span class="nl">height:</span> <span class="mi">20</span><span class="p">];</span>
-</span></code></pre></td></tr></table></div></figure>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='objc'><span class='line'><span class="n">nslog</span> <span class="s">@&quot;fff&quot;</span><span class="p">;</span>
-</span></code></pre></td></tr></table></div></figure>
-&#8211;>
+``` objc
+nslog @"fff";
+```
+-->
 
 
 <h3>延伸閱讀</h3>
