@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Octoprss | Chris's octopress]]></title>
-  <link href="http://chrisflicker.github.io/blog/categories/octoprss/atom.xml" rel="self"/>
+  <title><![CDATA[Tag: ruby | Chris's octopress]]></title>
+  <link href="http://chrisflicker.github.io/tags/ruby/atom.xml" rel="self"/>
   <link href="http://chrisflicker.github.io/"/>
   <updated>2013-06-05T16:52:46+08:00</updated>
   <id>http://chrisflicker.github.io/</id>

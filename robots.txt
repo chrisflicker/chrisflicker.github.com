@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://blog.chrisflicker.com/sitemap.xml 
+Sitemap: http://chrisflicker.github.io/sitemap.xml 

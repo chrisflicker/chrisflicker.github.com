@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Chrisflicker's Blog]]></title>
-  <link href="http://blog.chrisflicker.com/atom.xml" rel="self"/>
-  <link href="http://blog.chrisflicker.com/"/>
-  <updated>2013-04-24T16:01:38+08:00</updated>
-  <id>http://blog.chrisflicker.com/</id>
+  <title><![CDATA[Chris's octopress]]></title>
+  <link href="http://chrisflicker.github.io/atom.xml" rel="self"/>
+  <link href="http://chrisflicker.github.io/"/>
+  <updated>2013-06-05T16:52:46+08:00</updated>
+  <id>http://chrisflicker.github.io/</id>
   <author>
     <name><![CDATA[Chrisflicker]]></name>
     
@@ -14,10 +14,19 @@
 
   
   <entry>
+    <title type="html"><![CDATA[]]></title>
+    <link href="http://chrisflicker.github.io/blog/2013/05/act-like-leader/"/>
+    <updated>2013-05-05T19:25:00+08:00</updated>
+    <id>http://chrisflicker.github.io/blog/2013/05/act-like-leader</id>
+    <content type="html"><![CDATA[<p>這篇文章主要是在講領導力是可以被訓練的，透過「假裝」來讓自己習慣領導者的思考方式和溝通模式</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[安裝 Octopress 懶人包]]></title>
-    <link href="http://blog.chrisflicker.com/blog/2013/04/octopress-installed/"/>
+    <link href="http://chrisflicker.github.io/blog/2013/04/octopress-installed/"/>
     <updated>2013-04-20T20:31:00+08:00</updated>
-    <id>http://blog.chrisflicker.com/blog/2013/04/octopress-installed</id>
+    <id>http://chrisflicker.github.io/blog/2013/04/octopress-installed</id>
     <content type="html"><![CDATA[<h2>前言</h2>
 
 <p>今天下午把 Octopress 裝了起來並發佈到了 github page，弄到好花了不少時間，真心覺得用這麼麻煩的流程寫部落格應該會讓文章更新頻率降低吧？（而且換機器還必須弄起一樣的環境才能寫文章）駭客的個性應該不只是把複雜的事變簡單也是把簡單的事弄得更複雜（octoprss 號稱是給 hacker 用的部落格框架）總而言之不安於現況就是了！</p>
